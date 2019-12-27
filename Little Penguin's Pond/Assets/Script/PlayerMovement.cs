@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
+
     public float horizontalMove = 0f;
     public float verticalMove = 0f;
     public float runSpeed = 40f;
@@ -17,13 +18,19 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
-        jump = Input.GetKeyDown(KeyCode.W);
-        controller.Move(horizontalMove, false, jump);
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            jump = true;
+        }
+
 
 
     }
 
     private void FixedUpdate()
     {
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+        jump = false;
+
     }
 }

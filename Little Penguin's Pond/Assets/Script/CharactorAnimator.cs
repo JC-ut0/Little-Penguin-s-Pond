@@ -21,7 +21,8 @@ public class CharactorAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speedPrecent = movement.horizontalMove * movement.horizontalMove;
+        speedPrecent = movement.horizontalMove != 0 ? 1 : 0;
         animator.SetFloat("SpeedPercent", speedPrecent, locomotionAnimationSmoothTime, Time.deltaTime);
     }
+
 }
