@@ -1030,6 +1030,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8438019674828827532, guid: 693c00c70ff500a40982d78843922313,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8438019674828827534, guid: 693c00c70ff500a40982d78843922313,
         type: 3}
       propertyPath: runSpeed
@@ -1038,9 +1043,10 @@ PrefabInstance:
     - target: {fileID: 8438019674828827535, guid: 693c00c70ff500a40982d78843922313,
         type: 3}
       propertyPath: m_JumpForce
-      value: 300
+      value: 1150
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8438019674828827532, guid: 693c00c70ff500a40982d78843922313, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 693c00c70ff500a40982d78843922313, type: 3}
 --- !u!1 &1954430416
 GameObject:
@@ -1052,8 +1058,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1954430418}
   - component: {fileID: 1954430417}
-  m_Layer: 0
-  m_Name: Ocean
+  m_Layer: 4
+  m_Name: OceanBcakground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
