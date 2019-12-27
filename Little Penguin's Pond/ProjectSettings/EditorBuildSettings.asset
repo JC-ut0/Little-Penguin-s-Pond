@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ocean.unity
     guid: 86b8ade33162d1f488d8e4e41142c1ca
+  - enabled: 1
+    path: Assets/Scenes/Hotel.unity
+    guid: 04320287658581641ae5447531d519f2
   m_configObjects: {}
