@@ -114,7 +114,6 @@ GameObject:
   - component: {fileID: 8438019674828827528}
   - component: {fileID: 8438019674828827534}
   - component: {fileID: 8438019674828827535}
-  - component: {fileID: 8438019674828827532}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -190,9 +189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 8438019674828827535}
   horizontalMove: 0
-  verticalMove: 0
   runSpeed: 60
   jump: 0
+  joystick: {fileID: 0}
 --- !u!114 &8438019674828827535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,28 +210,27 @@ MonoBehaviour:
   m_AirControl: 0
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 7
+    m_Bits: 823
   m_GroundCheck: {fileID: 8438019675763195976}
   m_CeilingCheck: {fileID: 8438019675250813732}
   m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8438019674828827534}
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8438019674828827532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8438019674828827530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2822ddfc726e0974083d037156295ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8438019675250813735
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,13 +5,15 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
 
     public float horizontalMove = 0f;
-    public float verticalMove = 0f;
     public float runSpeed = 40f;
     public bool jump = false;
     public Joystick joystick;
 
+    Animator animator;
+
     private void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         if (FindObjectOfType<Joystick>() != null)
         {
             joystick = FindObjectOfType<Joystick>();
@@ -34,20 +36,26 @@ public class PlayerMovement : MonoBehaviour
             {
                 horizontalMove = 0f;
             }
-            verticalMove = joystick.Vertical * runSpeed;
             if (joystick.Vertical >= 0.4f)
             {
                 jump = true;
+                animator.SetBool("IsJumping", true);
             }
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
             jump = true;
+            animator.SetBool("IsJumping", true);
         }
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
+
+        animator.SetFloat("SpeedPercent", Mathf.Abs(horizontalMove));
     }
 
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+    }
     private void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
