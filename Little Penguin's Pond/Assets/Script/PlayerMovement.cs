@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalMove = 0f;
     public float verticalMove = 0f;
     public float runSpeed = 40f;
+    public bool jump = false;
 
 
 
@@ -16,13 +17,13 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
-
+        jump = Input.GetKeyDown(KeyCode.W);
+        controller.Move(horizontalMove, false, jump);
 
 
     }
 
     private void FixedUpdate()
     {
-        controller.Move(horizontalMove, false, false);
     }
 }
