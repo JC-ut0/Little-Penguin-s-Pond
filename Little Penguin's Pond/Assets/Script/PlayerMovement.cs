@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
         if (joystick != null)
         {
             if (joystick.Horizontal > .2f)
@@ -37,11 +35,17 @@ public class PlayerMovement : MonoBehaviour
                 horizontalMove = 0f;
             }
             verticalMove = joystick.Vertical * runSpeed;
+            if (joystick.Vertical >= 0.4f)
+            {
+                jump = true;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.W) || joystick.Vertical >= 0.4f)
+        if (Input.GetKeyDown(KeyCode.W))
         {
             jump = true;
         }
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
     }
 
     private void FixedUpdate()
