@@ -1900,22 +1900,22 @@ PrefabInstance:
     - target: {fileID: 976562816461507371, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.93
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.12
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
