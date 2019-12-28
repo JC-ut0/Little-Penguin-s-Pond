@@ -1892,6 +1892,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 831959977}
+    - target: {fileID: 976562816461507370, guid: bf4a259291673d04db97161a910d4cc3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976562816461507371, guid: bf4a259291673d04db97161a910d4cc3,
+        type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1947,7 +1957,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 976562816461507370, guid: bf4a259291673d04db97161a910d4cc3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bf4a259291673d04db97161a910d4cc3, type: 3}
 --- !u!1001 &6502947925543854256
 PrefabInstance:
@@ -2020,6 +2031,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502947925711288791, guid: 98d0437c9c28dc047b1266a6d1debab8,
+        type: 3}
+      propertyPath: m_LookaheadSmoothing
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502947925711288791, guid: 98d0437c9c28dc047b1266a6d1debab8,
+        type: 3}
+      propertyPath: m_LookaheadTime
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98d0437c9c28dc047b1266a6d1debab8, type: 3}
