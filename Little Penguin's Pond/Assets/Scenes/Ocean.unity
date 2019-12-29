@@ -1519,7 +1519,7 @@ PrefabInstance:
     - target: {fileID: 8438019674828827535, guid: 693c00c70ff500a40982d78843922313,
         type: 3}
       propertyPath: m_WhatIsGround.m_Bits
-      value: 4294967295
+      value: 1847
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8438019674828827532, guid: 693c00c70ff500a40982d78843922313, type: 3}
