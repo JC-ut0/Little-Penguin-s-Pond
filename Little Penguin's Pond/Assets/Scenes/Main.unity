@@ -393,6 +393,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &506345841 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8438019674828827531, guid: 693c00c70ff500a40982d78843922313,
+    type: 3}
+  m_PrefabInstance: {fileID: 1755999948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &673700739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,22 +2136,22 @@ PrefabInstance:
     - target: {fileID: 976562816461507371, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.93
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
@@ -2206,16 +2212,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 506345841}
     - target: {fileID: 6502947925145590405, guid: 98d0437c9c28dc047b1266a6d1debab8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.93
+      value: 5.05
       objectReference: {fileID: 0}
     - target: {fileID: 6502947925145590405, guid: 98d0437c9c28dc047b1266a6d1debab8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.12
+      value: 4.41
       objectReference: {fileID: 0}
     - target: {fileID: 6502947925145590405, guid: 98d0437c9c28dc047b1266a6d1debab8,
         type: 3}
