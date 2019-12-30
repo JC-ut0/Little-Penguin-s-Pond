@@ -3,8 +3,8 @@
 public class UIManager : MonoBehaviour
 {
     public AudioSource BGM;
-    public GameObject shopUI;
-    public GameObject inventoryUI;
+    public GameObject shop;
+    public GameObject inventory;
     public GameObject musicOff;
     public GameObject musicOn;
 
@@ -19,22 +19,24 @@ public class UIManager : MonoBehaviour
 
     public void OnShopOpen()
     {
-        shopUI.SetActive(true);
+        CloseAll();
+        shop.SetActive(true);
     }
 
     public void OnShopClosed()
     {
-        shopUI.SetActive(false);
+        shop.SetActive(false);
     }
 
     public void OnInventoryOpen()
     {
-        inventoryUI.SetActive(true);
+        CloseAll();
+        inventory.SetActive(true);
     }
 
     public void OnInventoryClosed()
     {
-        inventoryUI.SetActive(false);
+        inventory.SetActive(false);
     }
 
     public void OnMute()
@@ -49,5 +51,11 @@ public class UIManager : MonoBehaviour
         BGM.mute = false;
         musicOff.SetActive(false);
         musicOn.SetActive(true);
+    }
+
+    private void CloseAll()
+    {
+        inventory.SetActive(false);
+        shop.SetActive(false);
     }
 }
