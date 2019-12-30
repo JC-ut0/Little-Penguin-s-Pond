@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject BGM;
+    public AudioSource BGM;
     public GameObject shopUI;
     public GameObject inventoryUI;
     public GameObject musicOff;
@@ -30,13 +30,13 @@ public class UIManager : MonoBehaviour
     }
     public void OnMute()
     {
-        BGM.SetActive(false);
+        BGM.mute = true;
         musicOff.SetActive(true);
         musicOn.SetActive(false);
     }
     public void OnMusic()
     {
-        BGM.SetActive(true);
+        BGM.mute = false;
         musicOff.SetActive(false);
         musicOn.SetActive(true);
     }
