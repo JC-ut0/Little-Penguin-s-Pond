@@ -2130,7 +2130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8438019675285086947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -1.15, z: 0}
+  m_LocalPosition: {x: -0.23, y: -1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8438019676229683491}
@@ -2288,10 +2288,10 @@ MonoBehaviour:
   m_JumpForce: 1150
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 1847
+    m_Bits: 519
   m_GroundCheck: {fileID: 8438019675285086944}
   m_CeilingCheck: {fileID: 8438019675863140748}
   m_CrouchDisableCollider: {fileID: 0}

@@ -27,5 +27,4 @@ public class FishManager : MonoBehaviour
         transform.Rotate(new Vector3(0f, 180f, 0f));
     }
 
-
 }
