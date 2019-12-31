@@ -26,8 +26,12 @@ public class InventorySlot : MonoBehaviour
             text.enabled = false;
             InventoryManager.Instance.Remove(item);
             item.Use();
+            item = null;
         }
-        Debug.Log("no item in this slot!");
+        else
+        {
+            Debug.Log("no item in this slot!");
+        }
     }
 
     public bool isEmpty()

@@ -50,4 +50,8 @@ public class InventoryManager : MonoBehaviour
         // use this item
         items.Remove(item);
     }
+
+    private void Update()
+    {
+    }
 }

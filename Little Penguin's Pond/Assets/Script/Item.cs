@@ -11,7 +11,7 @@ public class Item : ScriptableObject
 
     public void Use()
     {
-        throw new NotImplementedException();
+        Debug.Log("Using item: " + name);
     }
 
     public bool Buy()
