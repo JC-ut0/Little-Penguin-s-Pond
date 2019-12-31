@@ -13,16 +13,4 @@ public class Item : ScriptableObject
     {
         Debug.Log("Using item: " + name);
     }
-
-    public bool Buy()
-    {
-        // if price <= player's money -> buy return true, add to inventory
-        bool succeed =  InventoryManager.Instance.Add(this);
-        if (succeed)
-        {
-            // reduce player's money
-            return true;
-        }
-        return false;
-    }
 }

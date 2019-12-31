@@ -2139,6 +2139,7 @@ MonoBehaviour:
   inventory: {fileID: 4600629052908908998}
   musicOff: {fileID: 4140677095275353447}
   musicOn: {fileID: 2546495586610255287}
+  gemNum: {fileID: 7357398096978195004}
 --- !u!114 &486548765826046273
 MonoBehaviour:
   m_ObjectHideFlags: 0

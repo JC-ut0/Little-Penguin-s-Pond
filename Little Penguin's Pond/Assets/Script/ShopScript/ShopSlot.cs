@@ -7,11 +7,14 @@ public class ShopSlot : MonoBehaviour
     public Image icon;
     public Text price;
 
+    PlayerEntity player;
+
     InventoryManager inventory;
 
     private void Start()
     {
         inventory = InventoryManager.Instance;
+        player = PlayerEntity.Instance;
     }
     public void AddItem(Item newItem)
     {
@@ -23,8 +26,10 @@ public class ShopSlot : MonoBehaviour
     {
         if (item != null)
         {
-            if (item.Buy())
+            if (item.price <= player.gemNum)
             {
+                inventory.Add(item);
+                player.gemNum -= item.price;
                 Debug.Log(item.name + " is your Inventory now!");
             }
             else

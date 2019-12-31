@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class UIManager : MonoBehaviour
     public GameObject musicOff;
     public GameObject musicOn;
 
+    public Text gemNum;
+    PlayerEntity player;
+
     private void Start()
     {
         // if BGM exists
@@ -15,8 +19,13 @@ public class UIManager : MonoBehaviour
         {
             BGM = GameObject.FindGameObjectWithTag("BGM").GetComponent<AudioSource>();
         }
+        player = PlayerEntity.Instance;
     }
 
+    private void Update()
+    {
+        gemNum.text = player.gemNum.ToString();  
+    }
     public void OnShopOpen()
     {
         CloseAll();

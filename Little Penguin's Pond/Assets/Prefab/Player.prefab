@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 8438019674828827528}
   - component: {fileID: 8438019674828827534}
   - component: {fileID: 8438019674828827535}
+  - component: {fileID: 269436773}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -231,6 +232,19 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &269436773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438019674828827530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c4ad3466f6b57b44a9b3b94c47e1521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemNum: 9999999
 --- !u!1 &8438019675250813735
 GameObject:
   m_ObjectHideFlags: 0
