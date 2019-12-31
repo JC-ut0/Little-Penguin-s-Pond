@@ -15,6 +15,13 @@ public class ShopSlot : MonoBehaviour
     {
         inventory = InventoryManager.Instance;
         player = PlayerEntity.Instance;
+        if (item != null)
+        {
+            icon.sprite = item.icon;
+            price.text = item.price.ToString();
+            icon.enabled = true;
+            price.enabled = true;
+        }
     }
     public void AddItem(Item newItem)
     {

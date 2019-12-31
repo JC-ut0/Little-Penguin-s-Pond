@@ -8,9 +8,12 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public bool isDefaultItem = false;
     public int price;
+    public GameObject _object;
 
     public void Use()
     {
+        Pond pond = Pond.Instance;
+        pond.Add(_object);
         Debug.Log("Using item: " + name);
     }
 }

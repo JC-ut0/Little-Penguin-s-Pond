@@ -1,27 +1,22 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.UI;
 
 /* This object manages the inventory UI. */
 
 public class InventoryUI : MonoBehaviour
 {
-
     public GameObject inventoryUI;  // The entire UI
     public Transform itemsParent;   // The parent object of all the items
 
-    InventoryManager inventory;    // Our current inventory
+    private InventoryManager inventory;    // Our current inventory
 
-
-
-    void Start()
+    private void Start()
     {
         inventory = InventoryManager.Instance;
         inventory.onItemChangedCallback += UpdateUI;
     }
 
     // Check to see if we should open/close the inventory
-    void Update()
+    private void Update()
     {
         if (inventoryUI.activeSelf)
         {
