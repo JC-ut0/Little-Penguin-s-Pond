@@ -7,6 +7,12 @@ public class ShopSlot : MonoBehaviour
     public Image icon;
     public Text price;
 
+    InventoryManager inventory;
+
+    private void Start()
+    {
+        inventory = InventoryManager.Instance;
+    }
     public void AddItem(Item newItem)
     {
         item = newItem;
