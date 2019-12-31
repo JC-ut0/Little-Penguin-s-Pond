@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    public Item item;
-    public Image icon;
-    public Text text;
+    public Item item; // current item in this slot
+    public Image icon; // item's icon
+    public Text text; // item's price
 
     public void AddItem(Item newItem)
     {
@@ -16,21 +16,32 @@ public class InventorySlot : MonoBehaviour
         text.enabled = true;
     }
 
+
+    public void ClearSlot()
+    {
+        item = null;
+        icon.sprite = null;
+        icon.enabled = false;
+        text.enabled = false;
+    }
+
+    // If the remove button is pressed, this function will be called.
+    public void RemoveItemFromInventory()
+    {
+        InventoryManager.Instance.Remove(item);
+    }
+
+    // Use the item
     public void UseItem()
     {
         if (item != null)
         {
-            // put this item to the pond
-            Debug.Log(item.name + " is in the pond now!");
-            icon.enabled = false;
-            text.enabled = false;
-            InventoryManager.Instance.Remove(item);
             item.Use();
-            item = null;
+            RemoveItemFromInventory();
         }
         else
         {
-            Debug.Log("no item in this slot!");
+            Debug.Log("Empty Slot!");
         }
     }
 

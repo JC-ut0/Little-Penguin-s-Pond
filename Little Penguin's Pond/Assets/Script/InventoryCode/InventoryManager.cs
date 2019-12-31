@@ -3,15 +3,14 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    private static InventoryManager _instance;
-    public List<Item> items;
-    public int maxSpace = 20;
-    public InventorySlot[] slots;
+    #region Singleton
 
+    private static InventoryManager _instance;
     public static InventoryManager Instance { get { return _instance; } }
 
     private void Awake()
     {
+        DontDestroyOnLoad(transform.gameObject);
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
@@ -21,34 +20,37 @@ public class InventoryManager : MonoBehaviour
             _instance = this;
         }
     }
+    #endregion
+
+    public delegate void OnItemChanged();
+    public OnItemChanged onItemChangedCallback;
+
+    public List<Item> items = new List<Item>();
+
+    public int maxSpace = 20;
+    public InventorySlot[] slots;
+
+    
+
 
     public bool Add(Item item)
     {
         if (items.Count < maxSpace)
         {
             items.Add(item);
-            AddItemToInventorySlot(item);
+            if (onItemChangedCallback != null)
+                onItemChangedCallback.Invoke();
             return true;
         }
         return false;
     }
 
-    private void AddItemToInventorySlot(Item item)
-    {
-        foreach (InventorySlot slot in slots)
-        {
-            if (slot.item == null)
-            {
-                slot.AddItem(item);
-                break;
-            }
-        }
-    }
 
     public void Remove(Item item)
     {
-        // use this item
         items.Remove(item);
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
     }
 
     private void Update()
