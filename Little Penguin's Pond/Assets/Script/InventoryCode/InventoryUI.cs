@@ -12,10 +12,8 @@ public class InventoryUI : MonoBehaviour
 
     InventoryManager inventory;    // Our current inventory
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(transform.gameObject);
-    }
+
+
     void Start()
     {
         inventory = InventoryManager.Instance;
@@ -52,4 +50,8 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        inventory.onItemChangedCallback -= UpdateUI;
+    }
 }

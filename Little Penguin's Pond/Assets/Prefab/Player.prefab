@@ -114,7 +114,6 @@ GameObject:
   - component: {fileID: 8438019674828827528}
   - component: {fileID: 8438019674828827534}
   - component: {fileID: 8438019674828827535}
-  - component: {fileID: 269436773}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -151,10 +150,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -190,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 8438019674828827535}
   horizontalMove: 0
-  runSpeed: 60
+  runSpeed: 30
   jump: 0
   joystick: {fileID: 0}
 --- !u!114 &8438019674828827535
@@ -211,7 +210,7 @@ MonoBehaviour:
   m_AirControl: 0
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 823
+    m_Bits: 1847
   m_GroundCheck: {fileID: 8438019675763195976}
   m_CeilingCheck: {fileID: 8438019675250813732}
   m_CrouchDisableCollider: {fileID: 0}
@@ -232,19 +231,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &269436773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8438019674828827530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c4ad3466f6b57b44a9b3b94c47e1521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gemNum: 9999999
 --- !u!1 &8438019675250813735
 GameObject:
   m_ObjectHideFlags: 0

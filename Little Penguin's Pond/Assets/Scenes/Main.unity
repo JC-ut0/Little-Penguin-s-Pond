@@ -2195,22 +2195,22 @@ PrefabInstance:
     - target: {fileID: 976562816461507371, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 976562816461507540, guid: bf4a259291673d04db97161a910d4cc3,
         type: 3}
