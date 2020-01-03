@@ -62,12 +62,4 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Fish")
-        {
-            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
-            Debug.Log("ignored a fish");
-        }
-    }
 }
