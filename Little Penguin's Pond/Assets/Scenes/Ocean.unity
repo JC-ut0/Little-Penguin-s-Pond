@@ -640,7 +640,7 @@ GameObject:
   m_Layer: 11
   m_Name: fishSlot0 (9)
   m_TagString: Fish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -652,7 +652,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286456835}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.53, y: -2.39, z: 17.078125}
+  m_LocalPosition: {x: -7.93, y: -3.41, z: 17.078125}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 1428489069}
@@ -819,7 +819,7 @@ GameObject:
   m_Layer: 11
   m_Name: fishSlot0 (6)
   m_TagString: Fish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -831,7 +831,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342066321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.81, y: -1.78, z: 17.078125}
+  m_LocalPosition: {x: -6.63, y: -1.82, z: 17.078125}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 1428489069}
@@ -1194,7 +1194,7 @@ GameObject:
   m_Layer: 11
   m_Name: fishSlot0 (8)
   m_TagString: Fish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1206,7 +1206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534214044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.89, y: -5.05, z: 17.078125}
+  m_LocalPosition: {x: -0.78, y: -3.39, z: 17.078125}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 1428489069}
@@ -1569,7 +1569,7 @@ GameObject:
   m_Layer: 11
   m_Name: fishSlot0 (5)
   m_TagString: Fish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1581,7 +1581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842708826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2, y: -6.66, z: 17.078125}
+  m_LocalPosition: {x: -5.13, y: -5.26, z: 17.078125}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 1428489069}
@@ -1859,7 +1859,7 @@ GameObject:
   m_Layer: 11
   m_Name: fishSlot0 (2)
   m_TagString: Fish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1871,7 +1871,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944459300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.33, y: -5.16, z: 17.078125}
+  m_LocalPosition: {x: -1.18, y: -5.3, z: 17.078125}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 1428489069}
@@ -2026,7 +2026,7 @@ GameObject:
   m_Layer: 11
   m_Name: fishSlot0 (7)
   m_TagString: Fish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2038,7 +2038,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973496645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.36, y: -7.05, z: 17.078125}
+  m_LocalPosition: {x: -8.81, y: -5.65, z: 17.078125}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 1428489069}
@@ -2354,7 +2354,7 @@ GameObject:
   m_Layer: 11
   m_Name: fishSlot0 (3)
   m_TagString: Fish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2366,7 +2366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254833734}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.32, y: -0.73, z: 17.078125}
+  m_LocalPosition: {x: -1.78, y: -2.05, z: 17.078125}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 1428489069}
@@ -2924,7 +2924,7 @@ GameObject:
   m_Layer: 11
   m_Name: fishSlot0 (1)
   m_TagString: Fish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2936,7 +2936,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625331438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1, y: -6.32, z: 17.078125}
+  m_LocalPosition: {x: 2.02, y: -4.65, z: 17.078125}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 1428489069}
@@ -3091,7 +3091,7 @@ GameObject:
   m_Layer: 11
   m_Name: fishSlot0 (4)
   m_TagString: Fish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3103,7 +3103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769908909}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.49, y: -1.06, z: 17.078125}
+  m_LocalPosition: {x: 2.5, y: -2.12, z: 17.078125}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 1428489069}
@@ -4133,7 +4133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8587512553014675578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.82, y: -3.72, z: 17.078125}
+  m_LocalPosition: {x: -4.48, y: -3.72, z: 17.078125}
   m_LocalScale: {x: 0.591, y: 0.591, z: 0.591}
   m_Children: []
   m_Father: {fileID: 1428489069}
@@ -4156,7 +4156,7 @@ GameObject:
   m_Layer: 11
   m_Name: fishSlot0
   m_TagString: Fish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
