@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d340751783b61342a5d26d821a15bd7, type: 3}
   m_Name: "\u7231\u5FC3\u9E21\u86CB"
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
-  type: 0
-  price: 0
-  _object: {fileID: 0}
+  name: "\u7231\u5FC3\u9E21\u86CB"
+  icon: {fileID: 21300000, guid: efa79c46b7c2de147b5700eff675129b, type: 3}
+  type: 1
+  price: 10
+  _object: {fileID: 2031413582228093876, guid: 91daef634fa3f83409f93a21c0c4fbf0, type: 3}

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d340751783b61342a5d26d821a15bd7, type: 3}
-  m_Name: New Item
+  m_Name: "\u67E0\u6AAC"
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
-  type: 0
-  price: 0
-  _object: {fileID: 0}
+  name: "\u67E0\u6AAC"
+  icon: {fileID: 21300000, guid: c791d273f7dd1ce44b9812191126d0fe, type: 3}
+  type: 1
+  price: 5
+  _object: {fileID: 3401466837447772312, guid: e5da89741dcdfcb459c794b14e87c654, type: 3}

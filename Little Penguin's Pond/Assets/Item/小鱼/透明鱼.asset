@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d340751783b61342a5d26d821a15bd7, type: 3}
   m_Name: "\u900F\u660E\u9C7C"
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
+  name: "\u900F\u660E\u9C7C"
+  icon: {fileID: 21300000, guid: 1c9b6a06e5d35bf4ca945cc5541ffcc0, type: 3}
   type: 0
-  price: 0
-  _object: {fileID: 0}
+  price: 300
+  _object: {fileID: 4728202758057786378, guid: 00aacec7cca406544b042b48ed18920a, type: 3}
