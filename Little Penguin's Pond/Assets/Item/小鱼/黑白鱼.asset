@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: HeiBaiYu
   icon: {fileID: 21300000, guid: 340cedad50846bc4ea44b833472fec41, type: 3}
-  isDefaultItem: 0
+  type: 0
   price: 100
   _object: {fileID: 320942392110011042, guid: caeeea5e7e35f2143b9280ad91138181, type: 3}

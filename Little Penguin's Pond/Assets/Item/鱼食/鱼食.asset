@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d340751783b61342a5d26d821a15bd7, type: 3}
-  m_Name: "\u516B\u722A\u9C7C"
+  m_Name: "\u9C7C\u98DF"
   m_EditorClassIdentifier: 
-  name: BaZhuaYu
-  icon: {fileID: 21300000, guid: 14ca98bd3a0d2d849bff1d5002d4cb1c, type: 3}
-  isDefaultItem: 0
-  price: 200
-  _object: {fileID: 5395312247294108209, guid: 70d4c6230bd381244b685592d8c8d9ca, type: 3}
+  name: "\u6A31\u6843"
+  icon: {fileID: 21300000, guid: 74a8098510ec4fa4f8cf19b028aba2e4, type: 3}
+  type: 1
+  price: 5
+  _object: {fileID: 3555284547202716934, guid: 0f95017db18b2fc46877432e548663b0, type: 3}

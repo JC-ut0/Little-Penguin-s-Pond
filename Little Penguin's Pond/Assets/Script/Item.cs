@@ -4,9 +4,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class Item : ScriptableObject
 {
+    public enum ItemType
+    {
+        FISH, FOOD, SCENE
+    }
     new public String name = "New Item";
     public Sprite icon = null;
-    public bool isDefaultItem = false;
+    public ItemType type;
     public int price;
     public GameObject _object;
 
@@ -15,7 +19,20 @@ public class Item : ScriptableObject
         Pond pond = Pond.Instance;
         if (pond.HasSpace())
         {
-            pond.Add(_object);
+            switch (type)
+            {
+                case ItemType.FISH:
+                    pond.Add(_object);
+                    break;
+                case ItemType.FOOD:
+                    Instantiate(_object);
+                    break;
+                case ItemType.SCENE:
+                    break;
+                default:
+                    break;
+            }
+            
             Debug.Log("Using item: " + name);
             return true;
         }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3254248495351778099}
   - component: {fileID: 3254248495351778096}
   - component: {fileID: 6692867641430872736}
+  - component: {fileID: 50876074}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -68,3 +69,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemNum: 9999999
+--- !u!114 &50876074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254248495351778097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd9a35c1b12a9f4b887ae246d561e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishObjects: []
+  maxSpace: 10

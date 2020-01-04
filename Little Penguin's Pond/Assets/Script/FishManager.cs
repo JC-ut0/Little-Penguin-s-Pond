@@ -8,9 +8,12 @@ public class FishManager : MonoBehaviour
 
     public bool turnAble = false;
 
+    public float speed;
     public float randomX;
     public float randomY;
     private float timeWait = 2f;
+    GameObject food;
+    bool hasEaten = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -22,6 +25,7 @@ public class FishManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        FindFood();
         if (timeWait >= 2)
         {
             timeWait = 0f;
@@ -43,8 +47,16 @@ public class FishManager : MonoBehaviour
             }
         }
         timeWait = timeWait + Time.fixedDeltaTime;
+        
     }
-
+    void FindFood()
+    {
+        food =  GameObject.FindGameObjectWithTag("Food");
+        if (food != null && ! hasEaten)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, food.GetComponent<Transform>().position,  speed * Time.fixedDeltaTime);
+        }
+    }
     private void Flip()
     {
         // rotate 180
@@ -55,5 +67,16 @@ public class FishManager : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         Physics2D.IgnoreCollision(GetComponent<Collider2D>(), player.GetComponent<Collider2D>());
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Food" && !hasEaten)
+        {
+            Destroy(collision.collider.gameObject);
+            food = null;
+            hasEaten = true;
+            Debug.Log("eat food");
+        }
     }
 }
