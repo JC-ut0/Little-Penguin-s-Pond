@@ -16,7 +16,6 @@ public class InventorySlot : MonoBehaviour
         text.enabled = true;
     }
 
-
     public void ClearSlot()
     {
         item = null;
@@ -34,14 +33,13 @@ public class InventorySlot : MonoBehaviour
     // Use the item
     public void UseItem()
     {
-        if (item != null)
+        if (item != null && item.Use())
         {
-            item.Use();
             RemoveItemFromInventory();
         }
         else
         {
-            Debug.Log("Empty Slot!");
+            Debug.Log("Failed to Use this item!");
         }
     }
 

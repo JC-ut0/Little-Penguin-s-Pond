@@ -10,10 +10,15 @@ public class Item : ScriptableObject
     public int price;
     public GameObject _object;
 
-    public void Use()
+    public bool Use()
     {
         Pond pond = Pond.Instance;
-        pond.Add(_object);
-        Debug.Log("Using item: " + name);
+        if (pond.HasSpace())
+        {
+            pond.Add(_object);
+            Debug.Log("Using item: " + name);
+            return true;
+        }
+        return false;
     }
 }

@@ -3,70 +3,56 @@
 public class PondUI : MonoBehaviour
 {
     private Pond pond;    // Pond Script
-    GameObject[] gameObjects;
+    private GameObject[] fishSlots;
+
     private void Start()
     {
         pond = Pond.Instance;
         pond.onObjectChangedCallback += UpdateGUI;
 
-
-        gameObjects = GameObject.FindGameObjectsWithTag("Fish");
-
+        fishSlots = GameObject.FindGameObjectsWithTag("Fish");
     }
 
     // Check to see if we should open/close the inventory
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.X))
         {
         }
-            UpdateGUI();
+        UpdateGUI();
     }
 
-    // Update the inventory UI by:
-    //		- Adding items
-    //		- Clearing empty slots
-    // This is called using a delegate on the Inventory.
+    // Update the Pond UI by:
+    //		- Adding Fish
+    //		- Sell Fish
+    // This is called using a delegate on the Pond.
     public void UpdateGUI()
     {
         // SpriteRenderer[] slots = GetComponentsInChildren<SpriteRenderer>();
 
-        for (int i = 0; i < gameObjects.Length; i++)
+        for (int i = 0; i < fishSlots.Length; i++)
         {
             // Debug.Log(gameObjects[i] + " i:" +i + " pond.objects.Count:"  + pond.objects.Count);
 
-            if (i < pond.objects.Count)
+            if (i < pond.fishObjects.Count)
             {
-                gameObjects[i].SetActive(true);
-                gameObjects[i].GetComponent<SpriteRenderer>().sprite = pond.objects[i].GetComponent<SpriteRenderer>().sprite;
-                gameObjects[i].GetComponent<Animator>().runtimeAnimatorController = pond.objects[i].GetComponent<Animator>().runtimeAnimatorController;
-                // Debug.Log(gameObjects[i] + "true");
+                fishSlots[i].SetActive(true);
+                fishSlots[i].GetComponent<SpriteRenderer>().sprite = pond.fishObjects[i].GetComponent<SpriteRenderer>().sprite;
+                fishSlots[i].GetComponent<Animator>().runtimeAnimatorController = pond.fishObjects[i].GetComponent<Animator>().runtimeAnimatorController;
+                if (pond.fishObjects[i].name == "八爪鱼")
+                {
+                    fishSlots[i].GetComponent<FishManager>().turnAble = false;
+                }
+                else
+                {
+                    fishSlots[i].GetComponent<FishManager>().turnAble = true;
+                }
             }
             else
             {
-                gameObjects[i].SetActive(false);
+                fishSlots[i].SetActive(false);
             }
         }
-        /*
-        for (int i = 0; i < slots.Length; i++)
-        {
-            if (i < pond.objects.Count)
-            {
-                GameObject slot =  slots[i].gameObject;
-                Debug.Log(slot.activeSelf);
-                slots[i].gameObject.SetActive(true);
-                Debug.Log(slot);
-                Debug.Log(slot.activeSelf);
-                slots[i].sprite = pond.objects[i].GetComponent<SpriteRenderer>().sprite;
-                slot.GetComponent<Animator>().runtimeAnimatorController = pond.objects[i].GetComponent<Animator>().runtimeAnimatorController;
-            }
-            else
-            {
-                slots[i].gameObject.SetActive(false);
-            }
-        }
-        */
     }
 
     private void OnDestroy()

@@ -33,7 +33,7 @@ public class ShopSlot : MonoBehaviour
     {
         if (item != null)
         {
-            if (item.price <= player.gemNum)
+            if (inventory.HasSpace() && item.price <= player.gemNum)
             {
                 inventory.Add(item);
                 player.gemNum -= item.price;

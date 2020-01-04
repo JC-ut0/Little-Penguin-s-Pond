@@ -53,6 +53,11 @@ public class InventoryManager : MonoBehaviour
             onItemChangedCallback.Invoke();
     }
 
+    public bool HasSpace()
+    {
+        return items.Count < maxSpace;
+    }
+
     private void Update()
     {
     }

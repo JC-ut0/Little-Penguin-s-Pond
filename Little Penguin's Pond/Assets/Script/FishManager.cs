@@ -1,6 +1,4 @@
-﻿
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FishManager : MonoBehaviour
 {
@@ -8,11 +6,11 @@ public class FishManager : MonoBehaviour
     public GameObject player;
     public Animator animator;
 
+    public bool turnAble = false;
 
     public float randomX;
     public float randomY;
-    float timeWait = 0f;
-
+    private float timeWait = 2f;
 
     // Start is called before the first frame update
     private void Start()
@@ -24,13 +22,12 @@ public class FishManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         if (timeWait >= 2)
         {
             timeWait = 0f;
-            randomX = Random.Range(-5f, 5f);
-            randomY = Random.Range(-.5f, .5f);
-            if (randomX > 0)
+            randomX = Random.Range(-5f, 5.2f);
+            randomY = Random.Range(-.5f, .6f);
+            if (randomX > 0 && turnAble)
             {
                 transform.SetPositionAndRotation(transform.position, new Quaternion(transform.rotation.x, 180f, transform.rotation.z, transform.rotation.w));
             }
@@ -40,24 +37,23 @@ public class FishManager : MonoBehaviour
             }
 
             fish.AddForce(new Vector2(randomX, randomY), ForceMode2D.Force);
-            animator.SetFloat("MovingSpeed", Mathf.Abs(randomX / 5));
-            
+            if (turnAble)
+            {
+                animator.SetFloat("MovingSpeed", Mathf.Abs(randomX / 5));
+            }
         }
-        timeWait = timeWait +  Time.fixedDeltaTime;
-        
-
+        timeWait = timeWait + Time.fixedDeltaTime;
     }
-
 
     private void Flip()
     {
         // rotate 180
         transform.Rotate(new Vector3(0f, 180f, 0f));
     }
+
     private void OnEnable()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         Physics2D.IgnoreCollision(GetComponent<Collider2D>(), player.GetComponent<Collider2D>());
-
     }
 }

@@ -26,26 +26,30 @@ public class Pond : MonoBehaviour
     public delegate void OnObjectChanged();
     public OnObjectChanged onObjectChangedCallback;
 
-    public List<GameObject> objects = new List<GameObject>();
+    public List<GameObject> fishObjects = new List<GameObject>();
 
     public int maxSpace = 20;
 
     public bool Add(GameObject @object)
     {
-        if (objects.Count < maxSpace)
+        if (fishObjects.Count < maxSpace)
         {
-            objects.Add(@object);
+            fishObjects.Add(@object);
             if (onObjectChangedCallback != null)
                 onObjectChangedCallback.Invoke();
             return true;
         }
         return false;
     }
+    public bool HasSpace()
+    {
+        return fishObjects.Count < maxSpace;
+    }
 
 
     public void Remove(GameObject @object)
     {
-        objects.Remove(@object);
+        fishObjects.Remove(@object);
         if (onObjectChangedCallback != null)
             onObjectChangedCallback.Invoke();
     }

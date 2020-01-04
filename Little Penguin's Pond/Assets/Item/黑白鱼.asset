@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u9ED1\u767D\u9C7C"
   m_EditorClassIdentifier: 
   name: HeiBaiYu
-  icon: {fileID: 21300000, guid: a0aa3cde8b092c248bf7f420d2aff7ad, type: 3}
+  icon: {fileID: 21300000, guid: 340cedad50846bc4ea44b833472fec41, type: 3}
   isDefaultItem: 0
   price: 100
   _object: {fileID: 320942392110011042, guid: caeeea5e7e35f2143b9280ad91138181, type: 3}
