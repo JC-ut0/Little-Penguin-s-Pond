@@ -2,23 +2,23 @@
 
 public class FishManager : MonoBehaviour
 {
-    private Rigidbody2D fish;
+    private Rigidbody2D rb;
     public GameObject player;
     public Animator animator;
 
     public bool turnAble = false;
 
     public float speed;
-    public float randomX;
-    public float randomY;
+    public int multiplier = 1;
+    public Vector2 movement;
     private float timeWait = 2f;
-    GameObject food;
-    bool hasEaten = false;
+    private GameObject food;
+    private bool hasEaten = false;
 
     // Start is called before the first frame update
     private void Start()
     {
-        fish = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
     }
@@ -26,37 +26,39 @@ public class FishManager : MonoBehaviour
     private void FixedUpdate()
     {
         FindFood();
-        if (timeWait >= 2)
-        {
-            timeWait = 0f;
-            randomX = Random.Range(-5f, 5.2f);
-            randomY = Random.Range(-.5f, .6f);
-            if (randomX > 0 && turnAble)
-            {
-                transform.SetPositionAndRotation(transform.position, new Quaternion(transform.rotation.x, 180f, transform.rotation.z, transform.rotation.w));
-            }
-            else
-            {
-                transform.SetPositionAndRotation(transform.position, new Quaternion(transform.rotation.x, 0f, transform.rotation.z, transform.rotation.w));
-            }
 
-            fish.AddForce(new Vector2(randomX, randomY), ForceMode2D.Force);
-            if (turnAble)
-            {
-                animator.SetFloat("MovingSpeed", Mathf.Abs(randomX / 5));
-            }
-        }
-        timeWait = timeWait + Time.fixedDeltaTime;
-        
-    }
-    void FindFood()
-    {
-        food =  GameObject.FindGameObjectWithTag("Food");
-        if (food != null && ! hasEaten)
+        timeWait = 0f;
+        movement.x = Random.Range(0f, 5.2f);
+        movement.y = Random.Range(0f, .6f);
+        if (Random.Range(0f, 1f) < 0.01)
         {
-            transform.position = Vector2.MoveTowards(transform.position, food.GetComponent<Transform>().position,  speed * Time.fixedDeltaTime);
+            multiplier *= -1;
+        }
+        if (multiplier > 0 && turnAble)
+        {
+            transform.SetPositionAndRotation(transform.position, new Quaternion(transform.rotation.x, 180f, transform.rotation.z, transform.rotation.w));
+        }
+        else
+        {
+            transform.SetPositionAndRotation(transform.position, new Quaternion(transform.rotation.x, 0f, transform.rotation.z, transform.rotation.w));
+        }
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime * multiplier);
+
+        if (turnAble)
+        {
+            animator.SetFloat("MovingSpeed", Mathf.Abs(movement.x / 5.2f));
         }
     }
+
+    private void FindFood()
+    {
+        food = GameObject.FindGameObjectWithTag("Food");
+        if (food != null && !hasEaten)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, food.GetComponent<Transform>().position, speed * Time.fixedDeltaTime);
+        }
+    }
+
     private void Flip()
     {
         // rotate 180

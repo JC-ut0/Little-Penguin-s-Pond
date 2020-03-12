@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 40f;
     public bool jump = false;
     public Joystick joystick;
+    public bool UsingJoystick = true;
 
     Animator animator;
 
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (joystick != null)
+        if (UsingJoystick)
         {
             if (joystick.Horizontal > .2f)
             {
@@ -42,13 +43,15 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("IsJumping", true);
             }
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if(joystick.Horizontal == 0)
         {
-            jump = true;
-            animator.SetBool("IsJumping", true);
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                jump = true;
+                animator.SetBool("IsJumping", true);
+            }
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         }
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
         animator.SetFloat("SpeedPercent", Mathf.Abs(horizontalMove));
     }
 

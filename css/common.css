@@ -1,0 +1,40 @@
+/* .class #id use blank to show the next level*/
+body{
+	margin: 0px;
+}
+#wrapper{
+	border: 0px solid black;
+}
+#wrapper .header{
+	background-color: lavender;
+	height: fit-content;
+	padding: 10px;
+	color: blueviolet;
+}
+#wrapper .main{
+	background-color: ghostwhite;
+	height: fit-content;
+}
+#wrapper .footer{
+	background-color: blue;
+	height: fit-content;
+}
+#wrapper .logo{
+	font-size: large;
+	color: #fff;
+	background-color: black;
+	padding: 10px;
+}
+#wrapper .nav a{
+	background-color: royalblue;
+	font-size: 17px;
+	padding: 10px;
+	color: white;
+	overflow: auto;
+	float: left;
+	text-decoration: none;
+	
+}
+#wrapper .nav a:hover{
+	background-color: orange;
+}

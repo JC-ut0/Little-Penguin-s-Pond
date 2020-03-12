@@ -8,6 +8,7 @@ public class Item : ScriptableObject
     {
         FISH, FOOD, SCENE
     }
+
     new public String name = "New Item";
     public Sprite icon = null;
     public ItemType type;
@@ -17,25 +18,29 @@ public class Item : ScriptableObject
     public bool Use()
     {
         Pond pond = Pond.Instance;
-        if (pond.HasSpace())
+
+        switch (type)
         {
-            switch (type)
-            {
-                case ItemType.FISH:
-                    pond.Add(_object);
-                    break;
-                case ItemType.FOOD:
-                    Instantiate(_object);
-                    break;
-                case ItemType.SCENE:
-                    break;
-                default:
-                    break;
-            }
-            
-            Debug.Log("Using item: " + name);
-            return true;
+            case ItemType.FISH:
+                if (!pond.HasSpace())
+                {
+                    return false;
+                }
+                pond.Add(_object);
+                break;
+
+            case ItemType.FOOD:
+                Instantiate(_object);
+                break;
+
+            case ItemType.SCENE:
+                break;
+
+            default:
+                break;
         }
-        return false;
+
+        Debug.Log("Using item: " + name);
+        return true;
     }
 }

@@ -39,6 +39,7 @@ public class PondUI : MonoBehaviour
                 fishSlots[i].SetActive(true);
                 fishSlots[i].GetComponent<SpriteRenderer>().sprite = pond.fishObjects[i].GetComponent<SpriteRenderer>().sprite;
                 fishSlots[i].GetComponent<Animator>().runtimeAnimatorController = pond.fishObjects[i].GetComponent<Animator>().runtimeAnimatorController;
+                
                 if (pond.fishObjects[i].name == "八爪鱼")
                 {
                     fishSlots[i].GetComponent<FishManager>().turnAble = false;
