@@ -14,11 +14,32 @@
 				onProgress: UnityProgress
 			});
 		</script>
+		<!-- Bootstrap -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160828332-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+		
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+		
+			gtag('config', 'UA-160828332-1');
+		</script>
+		<script type="text/javascript" src="https://dl.dropboxusercontent.com/s/ta6b6xk2lmhggxu/header.js?dl=0"></script>
+		
 	</head>
 	<body>
-		<div id="wrapper">
-			<div class="nav"><a href="../index.html">HOME</a></div>
-		</div>
+		<script type="text/javascript">
+			Nav()
+			SetActive("Game")
+		</script>
 
 		<div class="webgl-content">
 			<div id="unityContainer" style="width: 960px; height: 600px"></div>
